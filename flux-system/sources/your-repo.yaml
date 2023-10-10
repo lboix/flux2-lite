@@ -1,0 +1,14 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: your-repo
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: master
+  secretRef:
+    name: your-git-user
+  url: ssh://git@gitlab.com/root_group/a_group/your_repo.git
+  timeout: 1m0s
+  suspend: false
