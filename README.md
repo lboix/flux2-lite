@@ -34,8 +34,23 @@ This repo is here to help you quickly get hands on by providing you the simplest
 - congratulations you are running FLuxV2!
 
 ## Bonus : Slack notifications
-- TBD
+When a issue in happening during the repo pull or the reconciliation of a namespace folder, you can be easily notified on Slack like this (using the [Notification controller](https://fluxcd.io/flux/components/notification/)):
+- create a new Slack app on your workspace and configure the Secret [secrets/your-slack-app-token.yaml](/flux-system/secrets/your-slack-app-token.yaml) accordingly
+  - kubectl apply this file
+- put the Slack channel name you want to use in [notifications/your-slack-channel.yaml](/flux-system/notifications/your-slack-channel.yaml)
+  - kubectl apply this file
+- customize the file [notifications/alerts.yaml](/flux-system/notifications/alerts.yaml) with YOUR_CLUSTER_NAME
+  - you can explore easily all available options by installing [Flux CLI](https://fluxcd.io/flux/installation/#install-the-flux-cli) and run `flux create alert --help`
+  - the `--explore` option is particularly useful to generate the manifest you want to use
+  - kubectl apply this file
+- tail the logs of the pod `notification-controller` in the `flux-system` namespace
+- make a test by commit / pushing a modification with a typo in the repo describing your cluster state
+- make sure the alert is detected in the logs and that your Slack channel is updated with this error message
+- commit / push the typo fix
+- you are all set now!
 
 ## Going further
-- TBD
+- Documentation about the GitOps Toolkit components Flux V2 is using : https://fluxcd.io/flux/components/
+- _Migrating from Flux v1 to v2 with Leigh Capili_ : https://www.youtube.com/watch?v=vwvTwLQhXVI
+  - excellent walkthrough
 
