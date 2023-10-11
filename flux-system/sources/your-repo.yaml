@@ -9,6 +9,7 @@ spec:
     branch: master
   secretRef:
     name: your-git-user
+  # example of a SSH url with a repo hosted in gitlab.com (only the first : is permitted)
   url: ssh://git@gitlab.com/root_group/a_group/your_repo.git
   timeout: 1m0s
   suspend: false
