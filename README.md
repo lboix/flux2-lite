@@ -10,6 +10,7 @@ This repo is here to help you quickly get hands on by providing you the simplest
 - If you are already using a GitOps agent on your Kubernetes cluster, deactivate the reconciliation for the namespace you want to test
 - All the entities related to the namespace you are testing are already defining it in their manifest (`metadata: / namespace:`)
 - All the entities related to the namespace you are testing are inside a folder
+- All the entities have been created through manifests (no usage of Helm charts)
 - Make sure that the namespace `flux-system` does not exist in your cluster
 
 ## Setup
@@ -53,4 +54,5 @@ When a issue in happening during the repo pull or the reconciliation of a namesp
 - Documentation about the GitOps Toolkit components Flux V2 is using : https://fluxcd.io/flux/components/
 - _Migrating from Flux v1 to v2 with Leigh Capili_ : https://www.youtube.com/watch?v=vwvTwLQhXVI
   - excellent walkthrough
+- Using Flux V2 to sync Helm charts : https://fluxcd.io/flux/components/helm/
 
