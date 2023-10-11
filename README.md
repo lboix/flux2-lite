@@ -2,9 +2,11 @@
 A small repo with the simplest .yaml manifests to test FluxV2 right away on your cluster
 
 ## Why?
-Whether you are migrating from deprecated [FluxV1](https://github.com/fluxcd/flux) or decided to go GitOps by testing FluxV2, the existing documentation can be intimidating: you may want to quickly test FluxV2 without using the CLI and its default behaviour of bootstraping a new repo containing your Flux setup. 
+Whether you are migrating from deprecated [FluxV1](https://github.com/fluxcd/flux) or decided to go GitOps by testing [FluxV2](https://fluxcd.io/flux/), the existing documentation can be intimidating. You may want to quickly test FluxV2 without using the CLI and its default behaviour of bootstraping a new repo containing your Flux setup. 
 
-This repo is here to help you quickly get hands on by providing you the simplest manifests template.
+That was my case so I created this repo to help you quickly get hands on by providing the simplest manifests template.
+
+I hope it will help you discover the GitOps philosophy and start great things following it!
 
 ## Prerequisites
 - If you are already using a GitOps agent on your Kubernetes cluster, deactivate the reconciliation for the namespace you want to test
